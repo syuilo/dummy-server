@@ -12,6 +12,7 @@
 
 ## Usage
 configディレクトリ内のディレクトリは`env`と呼ばれ、その中にサーバーが返すHTMLやヘッダー定義などが含まれています。
+デフォルトでは[`default`というenv](https://github.com/syuilo/dummy-server/tree/master/config-example/default)が含まれています。
 
 サーバーを起動するときは、読み込むenv名とポートを指定します。例:
 `node . default 5000`
