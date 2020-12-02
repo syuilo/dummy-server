@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script>
+			!function(o,r,e){var n=[];if(!window.reproio){window.reproio=function(){n.push(arguments)};var i=o.createElement(r),t=o.getElementsByTagName(r)[0];i.src="http://localhost:8000/build/repro-sdk.min.js",i.async=!0,i.crossOrigin="",i.onload=function(){window.reproio("setSnippetVersion","2.1"),n.forEach(function(o){window.reproio.apply(window.reproio,o)})},t.parentNode.insertBefore(i,t)}}(document,"script");
+			window.reproio('setup', 'YOUR TOKEN HERE', { log_level: 'default', });
+			window.reproio('track', 'pageView', { url: location.pathname, });
+		</script>
+		<script>
+			function track() {
+				const eventName = document.getElementById('event').value;
+				console.log('TRACKING... ' + eventName);
+				reproio('track', eventName);
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Hello Repro!</h1>
+		<p>Test server running.</p>
+		<section>
+			<h2>Event Tracking</h2>
+			<input value="event1" type="text" id="event"/>
+			<button onclick="track()">Track</button>
+		</section>
+	</body>
+</html>
